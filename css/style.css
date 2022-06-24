@@ -1,0 +1,112 @@
+/*-------------
+    RESET
+-------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------
+    COMMONS
+-------------*/
+:root {
+    --primary-color: #1e2d3b;
+    --secondary-color: #2e3a46;
+    --primary-color-text: #fff;
+    --secondary-color-text: #808080;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 80rem;
+    padding: .625rem;
+}
+
+body { 
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*-------------
+    HEADER
+-------------*/
+header {
+    background-color: var(--secondary-color);
+    height: 3.75rem;
+}
+
+.logo__img {
+    height: 2.5rem;
+}
+
+/*-------------
+    MAIN
+-------------*/
+main {
+    background-color: var(--primary-color);
+    min-height: calc(100vh - 3.75rem);
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.875rem;
+}
+
+.album {
+    width: calc(100% / 5 - 1.875rem);
+    margin: .9375rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-text);
+    padding: .625rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 75rem) {
+    .album {
+        width: calc(100% / 5 - 1.875rem);
+    }
+}
+
+@media screen and (max-width: 62rem) {
+    .album {
+        width: calc(100% / 4 - 1.875rem);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .album {
+        width: calc(100% / 3 - 1.875rem);
+    }
+}
+
+@media screen and (max-width: 36rem) {
+    .album {
+        width: calc(100% / 2 - 1.875rem);
+    }
+}
+
+@media screen and (max-width: 25rem) {
+    .album {
+        width: calc(100% - 1.875rem);
+    }
+}
+
+.album__img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.album__title {
+    color: var(--primary-color-text);
+    text-transform: uppercase;
+    margin: .625rem 0;
+}
+
+.album__author {
+    display: block;
+}
