@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="header">
                     <div class="logo">
-                        <img class="logo__img" src="../../assets/img/spotify-logo.png" alt="spotify logo">
+                        <img class="logo__img" src="https://www.geekslab.it/wp-content/uploads/2019/03/logo-spotify.png" alt="spotify logo">
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
             <section>
                 <div class="container">
                     <div class="albums">
-                        <div class="album">
+                        <div class="album" v-for="album in albums">
                             <img class="album__img" :src="album.poster" :alt="album.title">
                             <h5 class="album__title">{{album.title}}</h5>
                             <span class="album__author">{{album.author}}</span>
